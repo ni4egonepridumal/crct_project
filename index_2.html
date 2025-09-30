@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Мой сайт</title>
+  </head>
+  <body>
+    <style>
+      h1 {
+      }
+      .section_main {
+        color: green;
+      }
+      #section_main {
+        color: blue;
+      }
+      .navigation a:last-child {
+        color: pink;
+      }
+    </style>
+    <!-- Шапка сайта -->
+    <header>
+      <h1 style="color: red">Заголовок сайта</h1>
+      <nav>
+        <ul class="navigation">
+          <li><a href="/">Главная</a></li>
+          <li><a href="/about">О нас</a></li>
+          <li><a href="/contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+      <!-- Секция с основной информацией -->
+      <section>
+        <h2 class="section_main" id="section_main">Основной раздел</h2>
+        <p>Это основное содержимое страницы.</p>
+        <article>
+          <h3>Статья 1</h3>
+          <p>Текст статьи...</p>
+        </article>
+        <article>
+          <h3>Статья 2</h3>
+          <p>Текст статьи...</p>
+        </article>
+      </section>
+
+      <!-- Дополнительный контент -->
+      <aside>
+        <h3>Боковая панель</h3>
+        <p>Дополнительная информация</p>
+      </aside>
+    </main>
+
+    <!-- Форма обратной связи -->
+    <section>
+      <h2>Обратная связь</h2>
+      <form action="#" method="post">
+        <div>
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+          <label for="message">Сообщение:</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer>
+      <p>&copy; 2025 Мой сайт. Все права защищены.</p>
+      <address>
+        Контакт: <a href="mailto:info@example.com">info@example.com</a>
+      </address>
+    </footer>
+    <div class="after_footer">Текст</div>
+    <script src="script.js"></script>
+  </body>
+</html>
