@@ -1,3 +1,12 @@
-export const Button = () => {
-  return <button>Кнопка</button>;
+export const Button = ({ children, type, ...props }) => {
+  console.log("props", props);
+  return (
+    <button
+      classname={props.className}
+      type={type}
+      onClick={props.onCustomClick}
+    >
+      {children}
+    </button>
+  );
 };
