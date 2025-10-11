@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.navigate ul li {
+  list-style: none;
+}
+.navigate {
+    min-width: 200px;
+}
+.navigate__ul {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}

@@ -1,20 +1,11 @@
-import "./App.css";
-import { Button } from "./components/button/Button";
-
+import { Outlet } from "react-router";
+import { Header } from "./components/header/Header";
 function App() {
-  const handleClick = () => {
-    console.log("Клик_1");
-  };
   return (
-    <>
-      <div>Какойто текст</div>
-      <Button className="button_1" type="button" onCustomClick={handleClick}>
-        Кнопка_1
-      </Button>
-      <Button type="submit" onCustomClick={() => console.log("Клик_2")}>
-        Кнопка_2
-      </Button>
-    </>
+    <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
+      <Header />
+      <Outlet />
+    </div>
   );
 }
 
