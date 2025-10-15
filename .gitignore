@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 Лекция 1.docx
+/rhf_info
+/test
