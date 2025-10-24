@@ -5,6 +5,12 @@ export const Auth = () => {
   const [passwordValue, setPasswordValue] = useState("");
   const [errors, setErrors] = useState("");
 
+
+  // const setAuth = () => {
+  //   localStorage.setItem("token", JSON.stringify(true));
+  // };
+ 
+
   const handleSubmit = (e) => {
     e.preventDefault();
 

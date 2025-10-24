@@ -6,7 +6,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import { Home } from "./pages/Home.jsx";
 import { About } from "./pages/About.jsx";
-import { Auth } from "./pages/Auth_2/Auth.jsx";
+import { Auth } from "./pages/Auth/Auth.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +15,6 @@ const router = createBrowserRouter([
     children: [
       { index: true, Component: Home },
       { path: "about", Component: About },
-      // todo - добавить страницу Контакты в роутинг
     ],
   },
   {path: "auth", Component: Auth}
