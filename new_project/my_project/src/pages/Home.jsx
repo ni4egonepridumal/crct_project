@@ -1,6 +1,8 @@
 import { Header } from "../components/header/Header";
-import { instance } from "../api/index";
+import { useNavigate } from "react-router";
+import { instanceWithToken, instance } from "../api/index";
 export const Home = () => {
+  const navigate = useNavigate();
   const getFetchBooks = async () => {
     try {
       const response = await instance.get("product/1");
@@ -25,8 +27,22 @@ export const Home = () => {
   };
 
   const getFetchMovies = async () => {
-    const response = await instance.get("movies");
+    const response = await instanceWithToken.get("movies");
     console.log("response", response.data);
+  };
+
+  const logOut = () => {
+    localStorage.clear();
+    navigate("/auth");
+  };
+
+  const getAuthUser = async () => {
+    try {
+      const response = await instanceWithToken.get("auth_me");
+      console.log("response", response.data);
+    } catch (error) {
+      console.log("error", error);
+    }
   };
   return (
     <div>
@@ -34,6 +50,10 @@ export const Home = () => {
       <button onClick={getFetchBooks}>Сделать запрос книг</button>
       <button onClick={getFetchMovies}>Сделать запрос фильмов</button>
       <button onClick={postBooks}>Отправить книгу</button>
+      <button onClick={logOut}>выйти</button>
+      <button onClick={getAuthUser}>
+        Получить авторизованного пользователя
+      </button>
     </div>
   );
 };

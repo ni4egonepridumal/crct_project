@@ -2,19 +2,12 @@ import { useState, useEffect } from "react";
 import { Outlet } from "react-router";
 import { Header } from "./components/header/Header";
 import { useNavigate } from "react-router";
+import { useAuth } from "./hooks/useAuth";
 function App() {
-  const navigate = useNavigate();
 
-
-  const isAuth = JSON.parse(localStorage.getItem("token"));
-
-  useEffect(() => {
-    if (isAuth === false) {
-      navigate("/auth");
-    }
-  }, [isAuth, navigate]);
-
-  if (isAuth === false) {
+  const { isAuth } = useAuth();
+  console.log("isAuth", isAuth);
+  if (isAuth === null) {
     return <p>Загрузка</p>;
   }
   return (
